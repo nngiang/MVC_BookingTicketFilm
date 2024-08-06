@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "OutPutData";
+}
+
+<h2>OutPutData</h2>
+
+@using BookingTicketFilm_NamGiang.Models
+@model List<UserData>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Mobile</td>
+        </tr>
+    }
+</table>
+
+

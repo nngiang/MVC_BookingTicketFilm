@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\bookingticketfilm_namgiang\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|c:\\users\\lenovo\\desktop\\doan\\bookingticketfilm_namgiang\\bookingticketfilm_namgiang\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\bookingticketfilm_namgiang\\controllers\\resetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\controllers\\resetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|c:\\users\\lenovo\\desktop\\doan\\bookingticketfilm_namgiang\\bookingticketfilm_namgiang\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|c:\\users\\lenovo\\desktop\\doan\\bookingticketfilm_namgiang\\bookingticketfilm_namgiang\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\bookingticketfilm_namgiang\\views\\login\\verifyconfirmationcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\views\\login\\verifyconfirmationcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|c:\\users\\lenovo\\desktop\\doan\\bookingticketfilm_namgiang\\bookingticketfilm_namgiang\\views\\home\\home_user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\views\\home\\home_user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|c:\\users\\lenovo\\desktop\\doan\\bookingticketfilm_namgiang\\bookingticketfilm_namgiang\\views\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EACB29D1-781A-4B36-8B8C-B0C985B67DDB}|BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang.csproj|solutionrelative:bookingticketfilm_namgiang\\views\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home_User.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Home\\Home_User.cshtml",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Views\\Home\\Home_User.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Home\\Home_User.cshtml",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Views\\Home\\Home_User.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAABQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T17:28:15.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Register\\Register.cshtml",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Views\\Register\\Register.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Register\\Register.cshtml",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Views\\Register\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T17:01:54.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Views\\Login\\Login.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Login\\Login.cshtml",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Views\\Login\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T17:28:30.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResetPasswordController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\ResetPasswordController.cs",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Controllers\\ResetPasswordController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\ResetPasswordController.cs",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Controllers\\ResetPasswordController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T14:51:38.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VerifyConfirmationCode.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Login\\VerifyConfirmationCode.cshtml",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Views\\Login\\VerifyConfirmationCode.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Views\\Login\\VerifyConfirmationCode.cshtml",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Views\\Login\\VerifyConfirmationCode.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T17:33:24.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:21:05.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:40:15.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "BookingTicketFilm_NamGiang\\Controllers\\RegisterController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\DoAn\\BookingTicketFilm_NamGiang\\BookingTicketFilm_NamGiang\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "BookingTicketFilm_NamGiang\\Controllers\\RegisterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:40:30.095Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

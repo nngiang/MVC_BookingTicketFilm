@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bookingticketfilm",
+  "private_key_id": "a055f7dba1dc2720d497175d706b71087607d018",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqhhaZekc8CaPW\nVOGkXz/Yvm+yzCfiP9IAiZauaBP8aHblGDDWFMfsIeiq6ScwxyL30ia8LD1xqgEm\n3OevbgI685TZ6KsdnAjttROByvi8PXATSaekxO7qglZf/1e9agj4zJIFYwEGH9gW\nwHr1Ccq96QWCTrJYxiYrjRBMnpDtdHUDn5eUvaGi36QKd/gUQPgnsVih8Q9Avl89\n1xUxlI1YL0SOP9XqF+uchszd1KD2I1cJyUl1zSh6is7rarY7QyvbXI4QkFqM31Yg\n2aN7v2qvZAb6HQMTG12ixszSkETN4LXZ4lICAbBux4t89TOtc2ip94/vCDdBiT6Z\nQkpmP48XAgMBAAECggEAAPUfy1zUaZHkSZ/QZIvkX+Mx3V8oGi0hkL81CWWsNw6f\nHEo2e/1B4iGOnOcSQUPc/mc/sG7PKYQ63W0AIAwOFyam/1I/I7tskWki4uew3d26\nc2FGf7ZbYRW6Rm+4nmeqBTug1kboCpDDNd1+00Fq0gYs8b5fYgA61qPEI6oARlUO\nuBGxKu52PRVtioLunyP/5liEFu5kBu2X/ssx3AVUxihilfxlwO7DJm+mcL9EkJAn\nxd7v2Tc6Kc/tIxzkPAOMeYWANFHaJRAVdfNtzQDpQShQDJSWMGLbTSRnmT2m3K9S\n+s1Xa3MHF92wjoHYEGVImV3J+bIUOGx9ryVecaazAQKBgQDkbenQktXHFwT7rhw4\nSQmEbOaxh4cjuGU9YFQtxUuvmxGd/H/3sLEpxspMehCJXI60MBY3Y0L+3rhO5xUw\nB2igxI71xR4J0y1qAcR7BBqvWiMGw4lNt1S4tKpc5DheRfaXFiY6Fjh8ER/uAtiB\ncIf4/x8j6I71Y+sRa1wlrXLiGQKBgQC/Gv1DyoLdpSEt99r2AQuZDfsLqWJMAafL\nVboaDj0uyjj1nZZPYsgXQxe3w/gMlkwN9mxPLwI/JX/Ar3HN66gd0qVwEl0fZKqa\nAqM+bWi55Nv8zy2bo2V4aMAYhoRZxmTJzqRJdTa9e7gES+uaa0laWH0Nxm+Tmlcl\nFYOlZ08ArwKBgQDGXCPj+P4myniLTSA4SEQ5eI/DrdrOS/uuFo5CyMb2kQP1WySM\npCTUEEnvqzfc8EEDe5ZvNoUg6arG6afeczCKGuXByhBRm84d9bb21BOQHge4gegj\nUoYBdvFRhOTmCH8fqB495rnaEszVVCdKD7wjnvcdqX8q3D9uevojxcCzUQKBgBX5\nlIXnE4VJJ7eReKwxEpRW9zcwEw2KYzEOeofke0SWHFah+FbIlRmXrXKEJlHMNpKk\nc2/nh+qa9UXC5uM25e4H+t4YPn0NplBvXTYgfpphpqo7aJMtBs4BvZUUYsOv/Ib4\nLAwGXnULdO2JjV4EWDr7UeXzm4DtjnfFMY4jgwIhAoGBAOCe6HH6hjYsf3Dn8f1M\nEJ1+/8ankf1LqhvOCNamvhchEqMjpxMl8zJH/VBopPuPlNFJqa41ASPmTcDIc/Vw\nWJjKYRFYuzDcuEUTSL8DPKQoIiLIbsi3ppBpCqZFbXBoiVEP6+stKehpRiIjWuRK\ncz53jzIAq187kNdFrfsQjsLj\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-dy10b@bookingticketfilm.iam.gserviceaccount.com",
+  "client_id": "110277013585848321740",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-dy10b%40bookingticketfilm.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

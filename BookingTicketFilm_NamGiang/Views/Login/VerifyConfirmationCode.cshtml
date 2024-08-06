@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Vui lòng kiểm tra email";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xác nhận email</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles/Style_Login/VerifyConfirmationCode.css" />
+</head>
+<body>
+    <div class="verify-code-container">
+        <h2>Verify Confirmation Code</h2>
+
+        @using (Html.BeginForm("VerifyConfirmationCode", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                <label for="ConfirmationCode">Mã xác nhận là:</label>
+                <input type="text" id="ConfirmationCode" name="ConfirmationCode" required />
+            </div>
+
+            <div id="countdownMessage" class="countdown-message">
+                <!-- Hiển thị thông báo đếm ngược -->
+            </div>
+
+            <div>
+                <input type="submit" value="Verify Code" />
+            </div>
+
+            if (ViewBag.ErrorMessage != null)
+            {
+                <div style="color:red;">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+        }
+
+        <script>
+            var countdownTime = 30; // Giây
+
+            // Đếm ngược
+            var countdownInterval = setInterval(function () {
+                var minutes = Math.floor(countdownTime / 60);
+                var seconds = countdownTime % 60;
+
+                // Hiển thị thông báo đếm ngược
+                var countdownMessage = document.getElementById("countdownMessage");
+                countdownMessage.innerHTML = "Mã sẽ hết hiệu lực sau " + minutes + " phút " + seconds + " giây";
+
+                // Thông báo hết hạn mã
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownMessage.innerHTML = "Mã đã hết hiệu lực";
+                    document.getElementById("ConfirmationCode").disabled = true;
+                    document.querySelector("input[type='submit']").disabled = true;
+
+                    // Hiển thị alert khi hết hạn mã
+                    setTimeout(function () {
+                        alert("Mã xác nhận đã hết hiệu lực. Vui lòng đăng nhập lại.");
+                        window.location.href = "@Url.Action("Login", "Login")";
+                    }, 0);
+                }
+
+                countdownTime--;
+            }, 1000);
+        </script>
+    </div>
+</body>
+</html>

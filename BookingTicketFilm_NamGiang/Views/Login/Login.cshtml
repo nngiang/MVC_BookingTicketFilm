@@ -1,0 +1,125 @@
+﻿@model BookingTicketFilm_NamGiang.Models.UserData
+
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles/Style_Login/Login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Đảm bảo jQuery đã được tải -->
+</head>
+<body>
+    <div class="login-container" id="loginForm">
+        <h2>Login</h2>
+        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" required />
+            </div>
+            <div>
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" required />
+            </div>
+            <div>
+                <input type="submit" value="Login" />
+            </div>
+            if (ViewBag.ErrorMessage != null)
+            {
+                <div class="error-message">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+        }
+
+        <div style="margin-top: 20px;">
+            <p>Bạn chưa có tài khoản? <a href="javascript:void(0);" onclick="toggleForm('registerForm')">Đăng ký</a></p>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p><a href="javascript:void(0);" onclick="toggleForm('resetPasswordForm')">Quên mật khẩu?</a></p>
+        </div>
+    </div>
+
+    <div id="registerForm" style="display: none;">
+        @{
+            Html.RenderPartial("~/Views/Register/Register.cshtml");
+        }
+    </div>
+
+    <div id="resetPasswordForm" style="display: none;">
+        @{
+            Html.RenderPartial("~/Views/ResetPassword/ResetPassword.cshtml");
+        }
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            var forms = ['loginForm', 'registerForm', 'resetPasswordForm'];
+            for (var i = 0; i < forms.length; i++) {
+                if (forms[i] === formId) {
+                    document.getElementById(formId).style.display = 'block';
+                } else {
+                    document.getElementById(forms[i]).style.display = 'none';
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            // Đảm bảo token anti-forgery được gửi cùng với yêu cầu AJAX
+            var token = $('input[name="__RequestVerificationToken"]').val();
+
+            $("#resetPasswordForm").on("submit", function (event) {
+                event.preventDefault();
+                var email = $("#ResetEmail").val();
+
+                $.ajax({
+                    url: '@Url.Action("SendPasswordResetEmail", "ResetPassword")',
+                    type: 'POST',
+                    data: {
+                        email: email
+                    },
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader('RequestVerificationToken', token);
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: response.message,
+                                confirmButtonText: 'Quay về trang Đăng nhập'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '@Url.Action("Login", "Login")';
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: response.message,
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'An error occurred while sending the reset password email.',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

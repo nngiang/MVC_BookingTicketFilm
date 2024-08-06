@@ -1,0 +1,66 @@
+﻿/* Content/Styles/Style_Login/Style_Register/Register.css */
+
+.register-container {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .register-container h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    .register-container form {
+        margin-top: 20px;
+    }
+
+    .register-container label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .register-container input[type="text"],
+    .register-container input[type="email"],
+    .register-container input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .register-container input[type="submit"] {
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .register-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+    .register-container p {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .register-container a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .register-container a:hover {
+            text-decoration: underline;
+        }
