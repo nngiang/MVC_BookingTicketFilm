@@ -281,3 +281,7 @@ C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGia
 C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\System.Data.SQLite.dll
 C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\System.Data.SQLite.xml
 C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\hbehr.recaptcha.dll
+C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\EntityFramework.dll
+C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\EntityFramework.xml
+C:\Users\LENOVO\Desktop\DoAn\BookingTicketFilm_NamGiang\BookingTicketFilm_NamGiang\bin\EntityFramework.SqlServer.xml

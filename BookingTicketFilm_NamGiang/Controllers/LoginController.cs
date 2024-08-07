@@ -12,15 +12,13 @@ using System.Net;
 
 namespace BookingTicketFilm_NamGiang.Controllers
 {
-    //[OutputCache(NoStore = true, Location = System.Web.UI.OutputCacheLocation.None)] // xử lý lỗi antitoken ko khớp
     public class LoginController : Controller
     {
         private static string ApiKey = "AIzaSyBrJSxbb82yLfFAd-5MFa8K0965e5HXq6E";
         private static string Bucket = "bookingticketfilm.appspot.com";
-        //private static string RecaptchaSecretKey = "6Lf-oAgqAAAAAI8LHgCQPrjBBqsud8H888KiFawV";
         private static string EmailSender = "namgiangkt1010@gmail.com"; // Địa chỉ email người gửi
         private static string EmailPassword = "epxlmgjjhwusoded"; // Mật khẩu email người gửi (Mật khẩu ứng dụng toàn quyền)
-        private static int ConfirmationCodeValidityInSeconds = 30; //giây
+        private static int ConfirmationCodeValidityInSeconds = 30; // giây
 
         // GET: Login
         [AllowAnonymous]
@@ -29,15 +27,16 @@ namespace BookingTicketFilm_NamGiang.Controllers
             return View();
         }
 
+        // GET: VerifyConfirmationCode
         [AllowAnonymous]
         public ActionResult VerifyConfirmationCode()
         {
             return View();
         }
 
+        // POST: Login
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(UserData model)
         {
             try
@@ -48,8 +47,6 @@ namespace BookingTicketFilm_NamGiang.Controllers
 
                 if (!string.IsNullOrEmpty(token))
                 {
-                    string emailAddress = Request.Form["Email"];
-
                     string confirmationCode = GenerateConfirmationCode();
                     string emailContent = $"Mã xác nhận của bạn là: {confirmationCode}. Hãy sử dụng mã này để xác nhận đăng nhập vào Website BookingTicketFilm.";
 
@@ -62,16 +59,13 @@ namespace BookingTicketFilm_NamGiang.Controllers
                         TempData["Email"] = model.Email;
                         TempData["ConfirmationCodeTimestamp"] = DateTime.Now;
 
-                        return RedirectToAction("VerifyConfirmationCode", "Login");
+                        return RedirectToAction("VerifyConfirmationCode");
                     }
                     else
                     {
                         ViewBag.ErrorMessage = "Failed to send email.";
                         return View();
                     }
-
-                    //TempData["SuccessMessage"] = "Login successful!";
-                    //return RedirectToAction("Home_User", "Home");
                 }
                 else
                 {
@@ -86,22 +80,22 @@ namespace BookingTicketFilm_NamGiang.Controllers
             }
         }
 
-        //Create randomVeritify
+        // Create random verification code
         private string GenerateConfirmationCode()
         {
             Random random = new Random();
-            int codeLength = random.Next(6, 8); //Độ dài mã xác nhận từ 6 đến 8 chữ số
+            int codeLength = random.Next(6, 8); // Độ dài mã xác nhận từ 6 đến 8 chữ số
             string confirmationCode = "";
 
             for (int i = 0; i < codeLength; i++)
             {
-                confirmationCode += random.Next(0, 10); //Chọn ngẫu nhiên từ 0 đến 9
+                confirmationCode += random.Next(0, 10); // Chọn ngẫu nhiên từ 0 đến 9
             }
 
             return confirmationCode;
         }
 
-        //Phương thức gửi email
+        // Send email method
         private bool SendEmail(string emailAddress, string subject, string body)
         {
             try
@@ -127,25 +121,24 @@ namespace BookingTicketFilm_NamGiang.Controllers
             }
             catch (Exception ex)
             {
-                // Xử lý khi gửi email thất bại
+                // Handle email sending failure
                 return false;
             }
         }
 
-        // Action hiển thị trang nhập mã xác nhận
+        // POST: VerifyConfirmationCode
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public ActionResult VerifyConfirmationCode(string confirmationCode)
         {
             try
             {
-                // Lấy mã xác nhận và thời gian đếm ngược từ TempData
+                // Get stored confirmation code and timestamp from TempData
                 string storedConfirmationCode = TempData["ConfirmationCode"] as string;
                 string email = TempData["Email"] as string;
                 DateTime? timestamp = TempData["ConfirmationCodeTimestamp"] as DateTime?;
 
-                // Đảm bảo giữ mã xác nhận trong TempData cho lần xác nhận sau nếu không hợp lệ
+                // Ensure the confirmation code is kept in TempData for subsequent validation
                 TempData.Keep("ConfirmationCode");
                 TempData.Keep("Email");
                 TempData.Keep("ConfirmationCodeTimestamp");
@@ -153,36 +146,35 @@ namespace BookingTicketFilm_NamGiang.Controllers
                 if (string.IsNullOrEmpty(storedConfirmationCode) || !timestamp.HasValue)
                 {
                     ViewBag.ErrorMessage = "Vui lòng nhập mã xác nhận.";
-                    return View("VerifyConfirmationCode");
+                    return View();
                 }
 
-                // Kiểm tra thời gian hiệu lực của mã xác nhận
+                // Check the validity of the confirmation code
                 if ((DateTime.Now - timestamp.Value).TotalSeconds > ConfirmationCodeValidityInSeconds)
                 {
-                    TempData.Remove("ConfirmationCode"); //xoá mã khi hết hạn
+                    TempData.Remove("ConfirmationCode"); // Remove expired code
                     ViewBag.ErrorMessage = "Mã xác nhận đã hết hiệu lực.";
-                    return View("VerifyConfirmationCode");
+                    return View();
                 }
 
                 if (confirmationCode != storedConfirmationCode)
                 {
                     ViewBag.ErrorMessage = "Mã xác nhận không hợp lệ.";
-                    return View("VerifyConfirmationCode");
+                    return View();
                 }
 
-                // Xử lý khi mã xác nhận hợp lệ, ví dụ: cập nhật trạng thái đăng nhập cho người dùng
+                // Process successful verification, e.g., update user login status
 
-                TempData.Remove("ConfirmationCode"); // Xóa mã xác nhận sau khi xác nhận thành công
-                TempData.Remove("Email"); // Xóa email sau khi xác nhận thành công
-                TempData.Remove("ConfirmationCodeTimestamp"); // Xóa thời gian tạo mã sau khi xác nhận thành công
+                TempData.Remove("ConfirmationCode"); // Remove code after successful verification
+                TempData.Remove("Email"); // Remove email after successful verification
+                TempData.Remove("ConfirmationCodeTimestamp"); // Remove timestamp after successful verification
                 return RedirectToAction("Home_User", "Home");
             }
             catch (Exception ex)
             {
                 ViewBag.ErrorMessage = "Đã xảy ra lỗi trong quá trình xác nhận mã.";
-                return View("VerifyConfirmationCode");
+                return View();
             }
         }
-
     }
 }

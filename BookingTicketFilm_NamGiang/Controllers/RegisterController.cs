@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using FirebaseAdmin;
-using FirebaseAdmin.Auth;
-using Google.Apis.Auth.OAuth2;
-using BookingTicketFilm_NamGiang.Models;
 using Firebase.Auth;
+using BookingTicketFilm_NamGiang.Models;
 
 namespace BookingTicketFilm_NamGiang.Controllers
 {
     public class RegisterController : Controller
     {
         private static string ApiKey = "AIzaSyBrJSxbb82yLfFAd-5MFa8K0965e5HXq6E";
-        private static string Bucket = "bookingticketfilm.appspot.com";
 
         // GET: Register
         public ActionResult Register()
@@ -41,37 +37,6 @@ namespace BookingTicketFilm_NamGiang.Controllers
             }
 
             return View();
-        }
-
-        [AllowAnonymous]
-        [HttpGet]
-        public ActionResult Login(string returnUrl)
-        {
-            try
-            {
-                if (this.Request.IsAuthenticated)
-                {
-                    return this.RedirectToLocal(returnUrl);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex);
-            }
-
-            return this.View();
-        }
-
-        private ActionResult RedirectToLocal(string returnUrl)
-        {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
         }
     }
 }

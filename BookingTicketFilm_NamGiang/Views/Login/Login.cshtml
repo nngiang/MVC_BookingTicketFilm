@@ -8,117 +8,177 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/Styles/Style_Login/Login.css" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/logins/login-9/assets/css/login-9.css">
+    <link rel="stylesheet" href="~/Content/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Đảm bảo jQuery đã được tải -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        section.bg-primary {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .img-fluid.rounded.mb-4 {
+            width: 400px;
+            height: auto;
+            margin-left: 1cm;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .link-item {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+            .link-item:hover {
+                background-color: lightgray;
+                border-color: gray;
+            }
+
+        .card.border-0.rounded-4 {
+            border: 100px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+            .input-container input {
+                width: 100%;
+                padding-right: 40px;
+            }
+
+            .input-container .toggle-password {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #333;
+                font-size: 20px;
+            }
+    </style>
 </head>
 <body>
-    <div class="login-container" id="loginForm">
-        <h2>Login</h2>
-        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
-            <div>
-                <label for="Email">Email:</label>
-                <input type="email" id="Email" name="Email" required />
-            </div>
-            <div>
-                <label for="Password">Password:</label>
-                <input type="password" id="Password" name="Password" required />
-            </div>
-            <div>
-                <input type="submit" value="Login" />
-            </div>
-            if (ViewBag.ErrorMessage != null)
-            {
-                <div class="error-message">
-                    @ViewBag.ErrorMessage
+    <section class="bg-primary py-3 py-md-5 py-xl-8">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-12 col-md-6 col-xl-7">
+                    <div class="d-flex justify-content-center text-bg-primary">
+                        <div class="col-12 col-xl-9">
+                            <img class="img-fluid rounded mb-4" loading="lazy" src="~/Content/img/logo.png" alt="Logo">
+                            <hr class="border-primary-subtle mb-4">
+                            <h2 class="h1 mb-4">We make digital products that drive you to stand out.</h2>
+                            <p class="lead mb-5">We write words, take photos, make videos, and interact with artificial intelligence.</p>
+                        </div>
+                    </div>
                 </div>
-            }
-        }
-
-        <div style="margin-top: 20px;">
-            <p>Bạn chưa có tài khoản? <a href="javascript:void(0);" onclick="toggleForm('registerForm')">Đăng ký</a></p>
+                <div class="col-12 col-md-6 col-xl-5">
+                    <div class="card border-0 rounded-4">
+                        <div class="card-body p-3 p-md-4 p-xl-5">
+                            <h3 style="text-align: center;">Login</h3>
+                            @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" name="Email" id="Email" placeholder="name@example.com" required>
+                                    <label for="Email" class="form-label">Email</label>
+                                </div>
+                                <div class="form-floating mb-3 input-container">
+                                    <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" required>
+                                    <label for="Password" class="form-label">Password</label>
+                                    <button type="button" class="toggle-password" id="togglePassword">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" name="RememberMe" id="RememberMe">
+                                    <label class="form-check-label text-secondary" for="RememberMe">
+                                        Keep me logged in
+                                    </label>
+                                </div>
+                                <div class="d-grid mb-4">
+                                    <input type="submit" class="btn btn-primary btn-lg" value="Log in now" />
+                                </div>
+                                if (ViewBag.ErrorMessage != null)
+                                {
+                                    <div class="alert alert-danger">
+                                        @ViewBag.ErrorMessage
+                                    </div>
+                                }
+                            }
+                            <div class="links-container">
+                                <a href="@Url.Action("ResetPassword", "ResetPassword")" class="link-item">Forgot password</a>
+                                <a href="@Url.Action("Register", "Register")" class="link-item">Do not have an account? Register</a>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <p class="mb-0" style="text-align: center;">Or continue with</p>
+                                <div class="d-flex gap-2 gap-sm-3 justify-content-center">
+                                    <a href="#!" class="btn btn-outline-danger bsb-btn-circle bsb-btn-circle-2xl" style="font-size: 1cm;">
+                                        <i class="fa fa-google" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#!" class="btn btn-outline-primary bsb-btn-circle bsb-btn-circle-2xl" style="font-size: 1cm;">
+                                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#!" class="btn btn-outline-dark bsb-btn-circle bsb-btn-circle-2xl" style="font-size: 1cm;">
+                                        <i class="fa fa-apple" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div style="margin-top: 20px;">
-            <p><a href="javascript:void(0);" onclick="toggleForm('resetPasswordForm')">Quên mật khẩu?</a></p>
-        </div>
-    </div>
-
-    <div id="registerForm" style="display: none;">
-        @{
-            Html.RenderPartial("~/Views/Register/Register.cshtml");
-        }
-    </div>
-
-    <div id="resetPasswordForm" style="display: none;">
-        @{
-            Html.RenderPartial("~/Views/ResetPassword/ResetPassword.cshtml");
-        }
-    </div>
+    </section>
 
     <script>
-        function toggleForm(formId) {
-            var forms = ['loginForm', 'registerForm', 'resetPasswordForm'];
-            for (var i = 0; i < forms.length; i++) {
-                if (forms[i] === formId) {
-                    document.getElementById(formId).style.display = 'block';
-                } else {
-                    document.getElementById(forms[i]).style.display = 'none';
-                }
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('Password');
+            var icon = this.querySelector('i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
             }
-        }
-
-        $(document).ready(function () {
-            // Đảm bảo token anti-forgery được gửi cùng với yêu cầu AJAX
-            var token = $('input[name="__RequestVerificationToken"]').val();
-
-            $("#resetPasswordForm").on("submit", function (event) {
-                event.preventDefault();
-                var email = $("#ResetEmail").val();
-
-                $.ajax({
-                    url: '@Url.Action("SendPasswordResetEmail", "ResetPassword")',
-                    type: 'POST',
-                    data: {
-                        email: email
-                    },
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader('RequestVerificationToken', token);
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Success',
-                                text: response.message,
-                                confirmButtonText: 'Quay về trang Đăng nhập'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.href = '@Url.Action("Login", "Login")';
-                                }
-                            });
-                        } else {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: response.message,
-                                confirmButtonText: 'OK'
-                            });
-                        }
-                    },
-                    error: function () {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: 'An error occurred while sending the reset password email.',
-                            confirmButtonText: 'OK'
-                        });
-                    }
-                });
-            });
         });
     </script>
 </body>
